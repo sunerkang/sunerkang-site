@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="boIE2BRyLcWGpEmkXkxdLy">
+<head data-page-node-id="HpHQF5Is6MB43eKOwLfg5m">
+<meta charset="utf-8" data-page-node-id="sSWlQ1vK6FdXryXc5rJ9qE" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-page-node-id="BMqHz1zhKFQQvQFBzkyaZa" />
+<meta name="color-scheme" content="dark" data-page-node-id="bDw2bH5rsouUcVEPJWaeNu" />
+<meta name="description" content="孙尔康 · 南京财经大学计算机科学与技术 2027 届。数据开发 / AI 应用开发方向，作品与联系方式。" data-page-node-id="YsdwvMHMcBMhwaisMwvYpJ" />
+<title>孙尔康 — 数据开发 / AI 应用开发</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="E1Pe3slPrNC6K1VC7JdxhC" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="NjcM2qbdBgWm4OBza8uA8y" />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" data-page-node-id="ajyQHnYNEtK8Z8D6uGPedf" />
+
+<style>
+  :root{
+    --bg:#0b0b11;
+    --nav:#12131a;
+    --line:rgba(255,255,255,0.06);
+    --text:#fff;
+    --muted:#a3a3b2;
+    --link:#c8c8d4;
+    --violet:#7c4dff;
+    --violet-2:#8f66ff;
+    --nav-h:62px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ background:var(--bg); color:var(--text); }
+  html{ scroll-behavior:smooth; scroll-padding-top:calc(var(--nav-h) + 16px); }
+  body{
+    font-family:"Figtree", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Noto Sans SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; text-decoration:none; }
+
+  /* ================= NAV ================= */
+  .nav{
+    position:fixed; top:0; left:0; right:0; z-index:20;
+    height:var(--nav-h);
+    background:rgba(18,19,26,0.86);
+    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1344px; height:100%; margin:0 auto; padding:0 68px;
+    display:flex; align-items:center; justify-content:space-between;
+    position:relative;
+  }
+  .brand{
+    display:flex; align-items:center; gap:11px;
+    font-weight:600; font-size:21px; letter-spacing:-0.01em;
+  }
+  .brand-orb{
+    width:26px; height:26px; border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, #c9b8ff 0%, #8b6cff 38%, #5b3df0 72%, #3a24b8 100%);
+    box-shadow:0 0 14px rgba(124,77,255,.55), inset -2px -3px 6px rgba(20,8,70,.55);
+    flex:none;
+  }
+  .nav-right{ display:flex; align-items:center; gap:30px; }
+  .nav-links{ display:flex; gap:38px; font-size:14px; font-weight:500; color:var(--link); }
+  .nav-links a{ position:relative; transition:color .2s; }
+  .nav-links a::after{
+    content:""; position:absolute; left:50%; bottom:-9px;
+    width:4px; height:4px; border-radius:50%; background:#8f66ff;
+    transform:translateX(-50%) scale(0); transition:transform .22s;
+  }
+  .nav-links a:hover{ color:#fff; }
+  .nav-links a.is-active{ color:#fff; }
+  .nav-links a.is-active::after{ transform:translateX(-50%) scale(1); }
+
+  .btn-open{
+    background:#fff; color:#0b0b11; font-weight:600; font-size:14px;
+    padding:10px 19px; border-radius:999px;
+    transition:transform .2s, box-shadow .2s;
+    white-space:nowrap;
+  }
+  .btn-open:hover{ transform:translateY(-1px); box-shadow:0 6px 20px rgba(255,255,255,.15); }
+
+  .menu-btn{
+    display:none; position:relative;
+    width:40px; height:40px; border-radius:12px;
+    background:rgba(255,255,255,.06); border:1px solid var(--line);
+    align-items:center; justify-content:center; cursor:pointer;
+    padding:0; flex:none;
+  }
+  .menu-btn span{
+    display:block; position:relative;
+    width:16px; height:1.6px; background:#fff; border-radius:1px;
+    transition:background .2s, transform .25s;
+  }
+  .menu-btn span::before,
+  .menu-btn span::after{
+    content:""; position:absolute; left:0;
+    width:16px; height:1.6px; background:#fff; border-radius:1px;
+    transition:transform .25s, top .25s;
+  }
+  .menu-btn span::before{ top:-6.6px; }
+  .menu-btn span::after{ top:6.6px; }
+  .nav.open .menu-btn span{ background:transparent; }
+  .nav.open .menu-btn span::before{ top:0; transform:rotate(45deg); }
+  .nav.open .menu-btn span::after{ top:0; transform:rotate(-45deg); }
+
+  .mobile-panel{
+    display:none;
+    position:absolute; top:calc(var(--nav-h) + 8px); left:16px; right:16px;
+    background:rgba(20,21,30,.96);
+    border:1px solid var(--line); border-radius:18px; padding:8px;
+    flex-direction:column;
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+  }
+  .mobile-panel a{
+    padding:14px 16px; border-radius:12px;
+    font-weight:500; color:var(--link); font-size:15px;
+  }
+  .mobile-panel a:hover{ background:rgba(255,255,255,.05); color:#fff; }
+  .nav.open .mobile-panel{ display:flex; }
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    min-height:100svh;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  #stage{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    display:block; z-index:0;
+    touch-action:pan-y;
+  }
+  .hero::after{
+    content:"";
+    position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.012) 0 1px, transparent 1px 7px),
+      radial-gradient(120% 80% at 50% 0%, transparent 55%, rgba(0,0,0,.45) 100%);
+  }
+  .hero-inner{
+    position:relative; z-index:2; pointer-events:none;
+    max-width:1344px; margin:0 auto; min-height:inherit;
+    padding:calc(var(--nav-h) + 40px) 68px 80px;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .copy{ max-width:620px; pointer-events:auto; }
+  .kicker{
+    display:inline-flex; align-items:center; gap:9px;
+    font-size:13px; font-weight:500; letter-spacing:.06em;
+    color:#b9b6cc; text-transform:none;
+    padding:7px 14px 7px 11px; border-radius:999px;
+    border:1px solid rgba(143,102,255,.28);
+    background:rgba(124,77,255,.08);
+  }
+  .kicker i{
+    width:6px; height:6px; border-radius:50%;
+    background:#8f66ff; box-shadow:0 0 8px #7c4dff; font-style:normal;
+  }
+  h1{
+    margin-top:22px;
+    font-size:clamp(48px, 6.4vw, 84px);
+    line-height:1.02;
+    font-weight:700;
+    letter-spacing:-0.015em;
+  }
+  .tagline{
+    margin-top:14px;
+    font-size:clamp(21px, 2.5vw, 32px);
+    line-height:1.35; font-weight:600;
+    letter-spacing:-0.01em;
+    color:#e8e6f3;
+  }
+  .tagline em{
+    font-style:normal;
+    background:linear-gradient(96deg, #b79bff 0%, #8f66ff 55%, #6f4bff 100%);
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .sub{
+    margin-top:22px;
+    color:var(--muted);
+    font-size:clamp(15px, 1.35vw, 18px);
+    line-height:1.72; font-weight:400;
+    max-width:520px;
+  }
+  .cta-row{ display:flex; align-items:center; gap:14px; margin-top:34px; flex-wrap:wrap; }
+  .btn-try{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    height:57px; padding:0 34px;
+    border-radius:999px;
+    background:linear-gradient(180deg, #8f66ff, #7c4dff);
+    color:#fff; font-weight:600; font-size:17px; letter-spacing:.01em;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+    transition:transform .25s, filter .25s;
+  }
+  .btn-try:hover{ transform:translateY(-2px); filter:brightness(1.08); }
+  .btn-ghost{
+    display:inline-flex; align-items:center; justify-content:center;
+    height:57px; padding:0 26px; border-radius:999px;
+    border:1px solid rgba(255,255,255,.14);
+    color:#d9d7e6; font-size:16px; font-weight:500;
+    transition:background .2s, border-color .2s, transform .25s;
+  }
+  .btn-ghost:hover{ background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.26); transform:translateY(-2px); }
+
+  .reveal{
+    opacity:0; transform:translateY(18px);
+    animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .d1{ animation-delay:.08s; }
+  .d2{ animation-delay:.2s; }
+  .d3{ animation-delay:.32s; }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+
+  .loader{
+    position:absolute; z-index:2;
+    left:70%; top:50%;
+    width:46px; height:46px; border-radius:50%;
+    border:2px solid rgba(143,102,255,.18);
+    border-top-color:#8f66ff;
+    transform:translate(-50%,-50%);
+    animation:spin 1s linear infinite;
+    transition:opacity .5s;
+  }
+  @keyframes spin{
+    0%{ transform:translate(-50%,-50%) rotate(0deg); }
+    100%{ transform:translate(-50%,-50%) rotate(360deg); }
+  }
+  .loader.hide{ opacity:0; }
+
+  /* ================= SECTIONS ================= */
+  .sec{ position:relative; border-top:1px solid var(--line); }
+  .sec::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(65% 45% at 85% 0%, rgba(124,77,255,.08), transparent 72%);
+  }
+  .sec-inner{ position:relative; max-width:1344px; margin:0 auto; padding:96px 68px; }
+  .sec-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:44px; }
+  .sec-kicker{ font-size:12px; font-weight:600; letter-spacing:.24em; color:#8f66ff; }
+  .sec-title{ font-size:clamp(24px, 2.6vw, 34px); font-weight:700; letter-spacing:-.02em; }
+  .sec-aside{ margin-left:auto; font-size:13px; color:#7f7d91; letter-spacing:.02em; }
+
+  .about{ display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:start; }
+  .about p{ color:#b6b4c6; font-size:15.5px; line-height:1.95; }
+  .about p + p{ margin-top:18px; }
+  .about strong{ color:#fff; font-weight:600; }
+  .facts{
+    border:1px solid var(--line); border-radius:20px; overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
+  }
+  .fact{ display:flex; gap:18px; padding:17px 22px; border-top:1px solid var(--line); }
+  .fact:first-child{ border-top:0; }
+  .fact dt{ flex:none; width:60px; color:#7f7d91; font-size:12.5px; letter-spacing:.08em; padding-top:3px; }
+  .fact dd{ color:#e7e5f0; font-size:14px; line-height:1.65; }
+
+  .timeline{ margin-top:58px; }
+  .tl-item{
+    position:relative; display:grid; grid-template-columns:148px 1fr; gap:26px;
+    padding:24px 0 24px 26px; border-top:1px solid var(--line);
+  }
+  .tl-item::before{
+    content:""; position:absolute; left:0; top:33px; width:7px; height:7px; border-radius:50%;
+    background:#7c4dff; box-shadow:0 0 10px rgba(124,77,255,.9);
+  }
+  .tl-date{ font-size:12.5px; color:#8a8899; letter-spacing:.03em; padding-top:3px; font-variant-numeric:tabular-nums; }
+  .tl-body h3{ font-size:16.5px; font-weight:600; letter-spacing:-.005em; }
+  .tl-body h3 span{ margin-left:10px; font-size:13px; font-weight:400; color:#9c9aad; }
+  .tl-body p{ margin-top:8px; color:#b6b4c6; font-size:14.5px; line-height:1.8; }
+
+  .cards{ display:grid; grid-template-columns:repeat(2, 1fr); gap:20px; }
+  .card{
+    position:relative; display:block; padding:28px; border-radius:22px;
+    border:1px solid var(--line); overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.014));
+    transition:transform .3s, border-color .3s, box-shadow .3s;
+  }
+  .card::after{
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:0;
+    transition:opacity .35s;
+    background:radial-gradient(80% 60% at 50% 0%, rgba(124,77,255,.15), transparent 70%);
+  }
+  .card:hover{ transform:translateY(-4px); border-color:rgba(143,102,255,.34); box-shadow:0 24px 60px -26px rgba(0,0,0,.9); }
+  .card:hover::after{ opacity:1; }
+  .card-top{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+  .card-idx{ font-size:12px; font-weight:600; letter-spacing:.22em; color:#7c4dff; }
+  .card-tag{ font-size:11.5px; color:#a9a7bb; border:1px solid var(--line); padding:4px 10px; border-radius:999px; white-space:nowrap; }
+  .card h3{ font-size:19px; font-weight:650; letter-spacing:-.01em; }
+  .card-meta{ margin-top:6px; font-size:12.5px; color:#8f8d9f; letter-spacing:.02em; }
+  .card ul{ margin-top:15px; list-style:none; display:grid; gap:8px; }
+  .card li{ position:relative; padding-left:15px; font-size:13.8px; line-height:1.75; color:#b6b4c6; }
+  .card li::before{
+    content:""; position:absolute; left:0; top:8px;
+    width:5px; height:5px; border-radius:50%; background:rgba(143,102,255,.85);
+  }
+  .card li b{ color:#e9e7f2; font-weight:600; }
+  .tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:17px; }
+  .tag{
+    font-size:11.5px; color:#c3c0d4; padding:4px 10px; border-radius:7px;
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.055);
+  }
+  .card-link{
+    display:inline-flex; align-items:center; gap:6px; margin-top:17px;
+    font-size:13.5px; font-weight:500; color:#b79bff; transition:gap .2s, color .2s;
+  }
+  .card-link:hover{ gap:10px; color:#d9c9ff; }
+
+  .skills{ display:grid; grid-template-columns:repeat(2, 1fr); gap:26px 48px; }
+  .skill-group{ padding-top:20px; border-top:1px solid var(--line); }
+  .skill-group h3{
+    font-size:12px; letter-spacing:.18em; font-weight:600; color:#8f8d9f;
+  }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .chip{
+    font-size:13px; color:#d5d2e2; padding:7px 13px; border-radius:9px;
+    background:rgba(255,255,255,.045); border:1px solid var(--line);
+    transition:border-color .2s, color .2s;
+  }
+  .chip:hover{ border-color:rgba(143,102,255,.38); color:#fff; }
+
+  .contact{ display:flex; align-items:flex-end; justify-content:space-between; gap:44px; flex-wrap:wrap; }
+  .contact-main{ max-width:620px; }
+  .contact h2{ font-size:clamp(28px, 3.6vw, 46px); line-height:1.24; font-weight:700; letter-spacing:-.02em; }
+  .contact p{ margin-top:18px; color:var(--muted); font-size:15px; line-height:1.85; }
+  .contact-links{ display:flex; flex-direction:column; gap:10px; min-width:280px; flex:1 1 280px; }
+  .c-link{
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+    padding:15px 20px; border-radius:14px; border:1px solid var(--line);
+    background:rgba(255,255,255,.032);
+    transition:background .22s, border-color .22s, transform .22s;
+  }
+  .c-link:hover{ background:rgba(124,77,255,.1); border-color:rgba(143,102,255,.4); transform:translateX(3px); }
+  .c-link em{ font-style:normal; font-size:11.5px; letter-spacing:.16em; color:#8f8d9f; }
+  .c-link strong{ font-size:14px; font-weight:500; color:#fff; letter-spacing:.01em; }
+
+  .foot{ border-top:1px solid var(--line); background:#09090e; }
+  .foot-inner{
+    max-width:1344px; margin:0 auto; padding:26px 68px;
+    display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
+    color:#757386; font-size:12.5px; letter-spacing:.02em;
+  }
+  .foot-inner a{ transition:color .2s; }
+  .foot-inner a:hover{ color:#c9c6d8; }
+
+  .sr{
+    opacity:0; transform:translateY(22px);
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);
+    transition-delay:var(--d, 0s);
+  }
+  .sr.in{ opacity:1; transform:none; }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width:1100px){
+    .nav-inner{ padding:0 40px; }
+    .hero-inner{ padding-left:40px; padding-right:40px; }
+    .nav-links{ gap:24px; }
+    .sec-inner{ padding-left:40px; padding-right:40px; }
+    .foot-inner{ padding-left:40px; padding-right:40px; }
+    .about{ gap:40px; }
+  }
+
+  @media (max-width:860px){
+    .nav-links{ display:none; }
+    .menu-btn{ display:inline-flex; }
+    .nav-right{ gap:10px; }
+    .hero-inner{
+      justify-content:flex-end;
+      text-align:center;
+      align-items:center;
+      padding:calc(var(--nav-h) + 20px) 24px 48px;
+    }
+    .copy{ max-width:560px; }
+    h1{ font-size:clamp(42px, 11.4vw, 58px); margin-top:16px; }
+    .kicker{ font-size:12px; padding:6px 12px 6px 10px; }
+    .tagline{ font-size:clamp(18px, 4.6vw, 22px); margin-top:10px; }
+    .sub{ margin-top:14px; font-size:14.5px; line-height:1.7; max-width:100%; }
+    .cta-row{ margin-top:22px; justify-content:center; gap:10px; }
+    .btn-try{ height:52px; padding:0 28px; font-size:16px; }
+    .btn-ghost{ height:52px; padding:0 22px; font-size:15px; }
+
+    .sec-inner{ padding:72px 24px; }
+    .sec-head{ margin-bottom:32px; }
+    .sec-aside{ display:none; }
+    .about{ grid-template-columns:1fr; gap:32px; }
+    .about p{ font-size:14.5px; }
+    .timeline{ margin-top:40px; }
+    .tl-item{ grid-template-columns:1fr; gap:8px; padding:20px 0 20px 22px; }
+    .tl-item::before{ top:26px; }
+    .cards{ grid-template-columns:1fr; }
+    .card{ padding:24px; }
+    .skills{ grid-template-columns:1fr; gap:22px; }
+    .contact{ flex-direction:column; align-items:stretch; gap:28px; }
+    .contact-links{ min-width:0; }
+    .foot-inner{ padding:22px 24px; }
+  }
+
+  @media (max-width:480px){
+    .nav-inner{ padding:0 16px; }
+    .hero-inner{ padding:calc(var(--nav-h) + 16px) 18px 36px; }
+    .brand{ font-size:19px; }
+    .btn-open{ padding:9px 15px; font-size:13px; }
+    h1{ font-size:clamp(38px, 12vw, 52px); }
+    .sec-inner{ padding:56px 18px; }
+    .card{ padding:20px; border-radius:18px; }
+    .card h3{ font-size:17.5px; }
+    .fact{ gap:12px; padding:15px 18px; }
+    .fact dt{ width:52px; font-size:12px; }
+    .fact dd{ font-size:13.5px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; animation:none; }
+    .loader{ animation:none; }
+    .sr{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+
+<!-- Import map is injected by the CDN bootstrap below (first reachable CDN wins;
+     jsDelivr per spec is tried first, then npmmirror / unpkg mirrors). -->
+</head>
+<body data-page-node-id="qhniuYZMyhCVqEgFTHR6Fw">
+
+<header class="nav" id="nav" data-page-node-id="iAQONF13YhJjR6TdeS5PS0">
+  <div class="nav-inner" data-page-node-id="NdK79JHODpGm1X2cW1E97N">
+    <a class="brand" href="#top" data-page-node-id="xUFsr2hYuW1bHUatCRrFUv"><span class="brand-orb" data-page-node-id="CC7LcZrDL8LCj8Cax0OB6X"></span>孙尔康</a>
+    <div class="nav-right" data-page-node-id="Ofz3zBVugxAbacO4Io0DjX">
+      <nav class="nav-links" data-page-node-id="Cx1dTWhSsH3rMo1pTpZvjf">
+        <a href="#about" data-page-node-id="9VqbltOUFF31DWHalLDCAS">关于</a>
+        <a href="#experience" data-page-node-id="IOrSrbcCnYB0VNs2kpKUqm">经历</a>
+        <a href="#projects" data-page-node-id="7lbruyf7FDLvYkGz73iHf6">项目</a>
+        <a href="#skills" data-page-node-id="ltLSmHyW2Ybn29Oo5iJ1qE">技能</a>
+        <a href="#contact" data-page-node-id="hnHtsUHILtUKW0bciXb3WF">联系</a>
+      </nav>
+      <a class="btn-open" href="resume.pdf" target="_blank" rel="noopener" data-page-node-id="fEdxidcTZx2gHxjsKgjslX">简历 PDF</a>
+      <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" data-page-node-id="fSnZQSim2dMx5Qb18GLALC"><span data-page-node-id="B6ro4cAhymQHKQqsKdgo51"></span></button>
+    </div>
+    <div class="mobile-panel" id="mobilePanel" data-page-node-id="PRwrkHf6Ok9H8QCAedB4bU">
+      <a href="#about" data-page-node-id="Zk8yoAAYOUPtnsaiIpSPOP">关于</a>
+      <a href="#experience" data-page-node-id="OUqWtoFVOmOiBPLqyGYOTB">经历</a>
+      <a href="#projects" data-page-node-id="778h3vt2O0J7ZBTgzqx68F">项目</a>
+      <a href="#skills" data-page-node-id="MGVB8mXT1YHITZtIHBsgDj">技能</a>
+      <a href="#contact" data-page-node-id="bEDoj7Zpfatsd8OX8XfzA3">联系</a>
+      <a href="resume.pdf" target="_blank" rel="noopener" data-page-node-id="Z8GtSesjPZyZrVMYLTnYJn">下载简历 PDF</a>
+    </div>
+  </div>
+</header>
+
+<main class="hero" id="hero" data-page-node-id="IKXTTw4qTwLiGMqQdOMy16">
+  <canvas id="stage" aria-hidden="true" data-page-node-id="eJNVX87MkGOVbS5bwB8bpy"></canvas>
+  <div class="loader" id="loader" data-page-node-id="DYsYtnlBOOGiWIHYvpsvt2"></div>
+  <div class="hero-inner" data-page-node-id="IRqj6vWt4V7HZSpfoA8yUL">
+    <div class="copy" data-page-node-id="vGWxnp4vvYH7FRLtbEMhA1">
+      <span class="kicker reveal d1" data-page-node-id="tNi3sC1tU2ZPvIeGEXa4BD"><i data-page-node-id="1QUmiPIIWvPsVUXggSXSCj"></i>南京财经大学 · 计算机科学与技术 · 2027 届</span>
+      <h1 class="reveal d1" data-page-node-id="A30qEbHEqlJ1Y1Iw2fnEVj">孙尔康</h1>
+      <p class="tagline reveal d2" data-page-node-id="lfctYEFUhDRxXuQk0OurVp">把数据与 AI，<em data-page-node-id="DYb2Jtzs7fpFNsX03g3j6X">做成能用的东西</em></p>
+      <p class="sub reveal d2" data-page-node-id="f9UvRSrpXYyjLiCG53rTe3">数据开发 / AI 应用方向。做过券商的数据链路与企业知识库问答，也喜欢用 HTML 与 Three.js 把想法直接写成能跑的页面。</p>
+      <div class="cta-row reveal d3" data-page-node-id="NKcQMPCppZPLu8S3Y8dJ7S">
+        <a class="btn-try" href="resume.pdf" target="_blank" rel="noopener" data-page-node-id="f5jeLbTGiZNFT7nBt2m5qC">下载简历 PDF</a>
+        <a class="btn-ghost" href="#projects" data-page-node-id="d8qg5c1kXwvZ2Rj7rPSwlR">看看项目</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="sec" id="about" data-page-node-id="JArZs7ajFXoWIpC33oGGQw">
+  <div class="sec-inner" data-page-node-id="suqHPqAtoGfCW887mt69gS">
+    <div class="sec-head sr" data-page-node-id="g6fr3N6DXI4OAuvWkepILF">
+      <span class="sec-kicker" data-page-node-id="hYGIGDBIQXDGfN7Jqd2VzX">01 / ABOUT</span>
+      <h2 class="sec-title" data-page-node-id="CPlEKj39L8mTc0AIKrr7zr">关于我</h2>
+      <span class="sec-aside" data-page-node-id="rAiGnm2ZFfZYSrp8W5urKY">南京 · 2027 届</span>
+    </div>
+    <div class="about" data-page-node-id="mHLlBTBrMuBWHXrF5gfXoH">
+      <div class="sr" data-page-node-id="QoiSn13Cw08WXeVaGv8uyX">
+        <p data-page-node-id="bVtmAwN7LRFFZGEgGd4z7M">我是孙尔康，南京财经大学计算机科学与技术专业 2027 届本科生，GPA 3.7 / 4.0，专业排名前 8%。方向很明确：<strong data-page-node-id="63FJAjXFwX6elvJmWmauUy">数据开发</strong>与 <strong data-page-node-id="4UvB6AjW8padT8yab4Pwar">AI 应用</strong>——把模糊的业务问题拆成清晰的指标与口径，再把模型能力封装成别人真的会用的服务。</p>
+        <p data-page-node-id="VI4u20RBbD0cMkGikIZXw7">在券商数据团队，我用 Python + Airflow 把资讯入仓延迟从 40 分钟压到 6 分钟；在 AI 团队，我用混合检索与重排把知识库的「答非所问」从 24% 降到 9%。我喜欢这类能被数字验证的改进。</p>
+        <p data-page-node-id="Nm991R56gVAr0NzhdWJDKr">工作之外会写一点前端：这个网站就是<strong data-page-node-id="ad6Lc9uX3bzvrn6RmZEOPW">一个 HTML 文件</strong>，右边的机器人由 Three.js 实时渲染——它真的会跟着你的鼠标转头。</p>
+      </div>
+      <dl class="facts sr" style="--d:.08s" data-page-node-id="nwJskqAH5lMnRS9mTXrN9w">
+        <div class="fact" data-page-node-id="4BtVkH0786o4XrvPxBEOwa"><dt data-page-node-id="MmusHVw8xyBRjMMEWGmS7y">教育</dt><dd data-page-node-id="aOsfnRIN2sDzXpyFt5tqur">南京财经大学 · 计算机科学与技术<br  data-page-node-id="tCjbv3mP2iVr9jMVMnzmKs"/>2023.09 – 2027.06</dd></div>
+        <div class="fact" data-page-node-id="hywt7LDYcVPtIEDFfRFKAU"><dt data-page-node-id="eAbf63kumOWXh29zaRlNnu">成绩</dt><dd data-page-node-id="XV4nd0KaKWHFJ2plyb3RsN">GPA 3.7 / 4.0 · 专业排名 8 / 126（前 8%）</dd></div>
+        <div class="fact" data-page-node-id="nwcV6yDeXNmMbh2qHcU0oe"><dt data-page-node-id="mEyZlw1fC8g5hJ0lSM3pwg">方向</dt><dd data-page-node-id="aK6uCKx0bUEXWSSV9yEj5z">数据开发工程师 / AI 应用开发</dd></div>
+        <div class="fact" data-page-node-id="5Mqm8kccSam9NgjGwOtC8v"><dt data-page-node-id="UyTvQIynFxT8D8rtnmafQR">城市</dt><dd data-page-node-id="BgmcxDMyB4gYAJvUPYdZhm">江苏 · 南京</dd></div>
+        <div class="fact" data-page-node-id="lJhM6tQP88dMhcAV5BiAkr"><dt data-page-node-id="D2CNzs37ECBQcLsAuzHkxp">状态</dt><dd data-page-node-id="wYoZ94J4SCRLyxFZYBb8Np">寻找 2027 届校招与日常实习机会</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experience" data-page-node-id="Vf5CD3p7HUc5gpuCjdVKPO">
+  <div class="sec-inner" data-page-node-id="eK5vK96NO3rtdXlcwrBLcX">
+    <div class="sec-head sr" data-page-node-id="HA5IuvMWwTUXtvE7EfHvaA">
+      <span class="sec-kicker" data-page-node-id="LVhjd7A3ug0BbwF5YGSU3w">02 / EXPERIENCE</span>
+      <h2 class="sec-title" data-page-node-id="uiSWKCnSDX1j4HMqjF9cDD">经历</h2>
+      <span class="sec-aside" data-page-node-id="ge3ILLLLknlgoPOeBjg2Ng">实习 · 教育</span>
+    </div>
+    <div class="timeline" data-page-node-id="CVfoyeFcHhOgS9GHB3kCLm">
+      <div class="tl-item sr" data-page-node-id="UvSYNMnP164CoEpYNfvHmc">
+        <div class="tl-date" data-page-node-id="zMB4FpPA6Dkd0hRpI0bs28">2026.03 – 2026.08</div>
+        <div class="tl-body" data-page-node-id="iRmb5QTGwnGnH5bU1pGv5o">
+          <h3 data-page-node-id="1szqqs8jHsP0P3IPsHgwbe">南京云枢数据科技<span data-page-node-id="pjF3LArORpwdMXNvSGNMgd">数据开发实习生 · 金融数据服务</span></h3>
+          <p data-page-node-id="w8MDNTREP0KO9jacsJc9l3">用 Python + Airflow 编排 12 个日批任务，资讯入仓延迟由 40 分钟压缩到 6 分钟，链路失败率降至 0.5% 以下；重构 8 张事实宽表与 23 个指标口径，搭建 60+ 条数据质量校验规则，季度数据事故由 3 起降为 0。</p>
+        </div>
+      </div>
+      <div class="tl-item sr" style="--d:.06s" data-page-node-id="Hl2HpopjAou37dJhnzFPHH">
+        <div class="tl-date" data-page-node-id="UW1PzkChdpkHbSLdSkszN9">2025.07 – 2025.12</div>
+        <div class="tl-body" data-page-node-id="nI3kFhfH2rS4jSUN0LzaKP">
+          <h3 data-page-node-id="J4HhwY295GmeSg30d5r2D6">苏州智言科技<span data-page-node-id="9OHlXpeFuHBAemzgonE49G">AI 应用开发实习生 · 企业知识库</span></h3>
+          <p data-page-node-id="VWDWbQHWLWgug4jv5ecTuf">LangChain + 向量库处理 1.8 万份制度与产品文档，Top-1 命中率 86%、平均响应 1.2s；设计 BM25 + 向量混合检索与重排策略，把「答非所问」占比从 24% 降到 9%；完成 200 并发压测与缓存改造，单机 QPS 由 12 提升到 45。</p>
+        </div>
+      </div>
+      <div class="tl-item sr" style="--d:.12s" data-page-node-id="CCDoFBPuRzr2hvQjZo1PHn">
+        <div class="tl-date" data-page-node-id="y0iHeQm3bNcGzOESKLRsSY">2023.09 – 2027.06</div>
+        <div class="tl-body" data-page-node-id="BRxNxz8BSDJaCRc8Nk2Wz6">
+          <h3 data-page-node-id="809U6dOGf1Wcq1YQHEXuE8">南京财经大学<span data-page-node-id="d2CHIFlsNUpl4xfIjIvWeT">计算机科学与技术 · 工学学士</span></h3>
+          <p data-page-node-id="rOF6eyGCqD20SZkjWeNffk">核心课程：数据结构与算法、数据库系统原理、操作系统、计算机网络、机器学习、金融数据分析、分布式系统，均 90 分以上。校一等奖学金（2024、2025）、全国大学生数学建模竞赛江苏省二等奖、蓝桥杯 Java 组江苏赛区一等奖。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects" data-page-node-id="grpGm1ycC24RZ8eINioB1A">
+  <div class="sec-inner" data-page-node-id="31uazGE49TqPss12Pxw7rN">
+    <div class="sec-head sr" data-page-node-id="i7WJjxoQffZqg6smiVlZpW">
+      <span class="sec-kicker" data-page-node-id="cSqLk22bHyVSHDyntCpUOg">03 / PROJECTS</span>
+      <h2 class="sec-title" data-page-node-id="4jYr0GpRXmMee0ZoVObtaA">项目</h2>
+      <span class="sec-aside" data-page-node-id="rKtzUFiuQP4VqVO58eLsys">4 个 · 从数据到界面</span>
+    </div>
+    <div class="cards" data-page-node-id="OxoB9oi0l6ErhxNpAAxab0">
+      <a class="card sr" href="https://sunerkang.github.io/ai-daily/" target="_blank" rel="noopener" data-page-node-id="rud87f9jwlh13FHkjGyBMj">
+        <div class="card-top" data-page-node-id="gFhpzARHilAvLiAfGWOHbw"><span class="card-idx" data-page-node-id="NB2JlDSxdcdqBKkFVlxeyE">01</span><span class="card-tag" data-page-node-id="k0sFiMzd1P8jc6jiKE5Nnh">已上线</span></div>
+        <h3 data-page-node-id="rHOsCD7yOfUmUA51HC3XTR">AI 行业日报看板</h3>
+        <p class="card-meta" data-page-node-id="lqwLJcrmvvjFaspsBN4AD9">个人项目 · 2026.10 · 单文件前端</p>
+        <ul data-page-node-id="pRGybWfaPW33WiSVPQ0xg6">
+          <li data-page-node-id="c8FQdnlxk4BkG8D5BTvDkT">零第三方依赖、断网可用的单页看板，包含阅读状态、重要程度筛选与移动端单列适配</li>
+          <li data-page-node-id="GWUZQ7Z08ojvRgSiz62GjW">部署于 GitHub Pages，手机扫码即可打开</li>
+        </ul>
+        <div class="tags" data-page-node-id="dqPWlu9CoGKA8Qd0QaRwcy"><span class="tag" data-page-node-id="msfnUf6sXA7PEEnma3O20T">HTML / CSS / JS</span><span class="tag" data-page-node-id="HiY6XflEBSLtvRo7n26FH5">响应式</span><span class="tag" data-page-node-id="iCMlmqXHUrp4zNWGSfvw77">GitHub Pages</span></div>
+        <span class="card-link" data-page-node-id="pHDHDbwOmhx4LaRPEIBmc5">sunerkang.github.io/ai-daily →</span>
+      </a>
+
+      <div class="card sr" style="--d:.06s" data-page-node-id="PvBV3QZUBr8TbfQFpX1inG">
+        <div class="card-top" data-page-node-id="BboqTpjHNEho0RkpRqpJ9Q"><span class="card-idx" data-page-node-id="GDxYsDgYInEWlUg7Cpeunq">02</span><span class="card-tag" data-page-node-id="2l5BbYqSAYcyfIkGq7h1p5">毕业设计</span></div>
+        <h3 data-page-node-id="CRqOJyIAdGAcyHj6dy0r8H">金融研报 RAG 问答与摘要</h3>
+        <p class="card-meta" data-page-node-id="e0pVvDFc1clv2CfkDfY65p">独立完成 · 2026.09 – 至今</p>
+        <ul data-page-node-id="1I7utdReQfQEUF6EkySL8H">
+          <li data-page-node-id="zDkCv4Oo4GFAbqDgWs2fEw">采集 6,000 份研报，完成 PDF 解析、章节级分块与机构 / 行业 / 评级元数据抽取</li>
+          <li data-page-node-id="Lc44rGPCs2Pk0oeFviPjuQ">混合检索 + 重排 + LLM 摘要，答案强制携带原文段落与页码；事实一致性 91%、引用可追溯率 96%</li>
+        </ul>
+        <div class="tags" data-page-node-id="X0QkmAjHGql1XiMT74saSz"><span class="tag" data-page-node-id="TqLIxukTZp2acWCq7tXAo6">LangChain</span><span class="tag" data-page-node-id="udkiJ4WRuGWOSOXKBdmwCF">FAISS</span><span class="tag" data-page-node-id="rbqI8SZeaoFnUdTc7fbCjS">Python</span></div>
+      </div>
+
+      <div class="card sr" style="--d:.06s" data-page-node-id="gIu0Uc8DImNIMAfsh8Ewzd">
+        <div class="card-top" data-page-node-id="DD6ePpf11aIW1ibAw9h5Hg"><span class="card-idx" data-page-node-id="fn2O6Czzo2M8wiwkcBKBKl">03</span><span class="card-tag" data-page-node-id="GBx2b6scojrRDMQ57bWqFl">校园产品</span></div>
+        <h3 data-page-node-id="f2xpjhiRFOF369UQ2cE954">校园二手交易平台</h3>
+        <p class="card-meta" data-page-node-id="QYHL85a5vNacClkw6Z4zCX">后端负责人 · 2025.03 – 2025.06</p>
+        <ul data-page-node-id="mtlMpRnxrSBfOhel5KhLUO">
+          <li data-page-node-id="naPPLbwFMTj3SmuH4wKAxW">Spring Boot + MySQL + Redis + Vue3，自研 JWT 鉴权、订单状态机与图片直传</li>
+          <li data-page-node-id="3CLcEl9EISiRobdB6YMsGW">上线 3 个月注册 3,200 人、累计成交 1,100 单；优化索引与缓存后列表接口 P95 由 820ms 降至 180ms</li>
+        </ul>
+        <div class="tags" data-page-node-id="8Y5n6xnh3Mj3ZHqdIrPdxt"><span class="tag" data-page-node-id="sCpSjWrUzR9MoKN9L0bZOW">Spring Boot</span><span class="tag" data-page-node-id="pa5DejerBax3zrZ9LMYeIa">Redis</span><span class="tag" data-page-node-id="cxhaOKNqqukjSm6hLb7s9Z">Vue3</span></div>
+      </div>
+
+      <div class="card sr" style="--d:.12s" data-page-node-id="wnBCx5NiR8WI10D5SDx7PV">
+        <div class="card-top" data-page-node-id="RdviEAE85Vqp9Dv2Vi9ygN"><span class="card-idx" data-page-node-id="XF2mXpSb9jdrAJS6q40qke">04</span><span class="card-tag" data-page-node-id="S3XFZljRz0eNXcWeH4xezI">就本页</span></div>
+        <h3 data-page-node-id="0CIhoIAZhyjZnwyp1ELt4E">Iris · 3D 智能助手首屏</h3>
+        <p class="card-meta" data-page-node-id="WiTT9fHIKZd8GA1zWGBDpk">个人实验 · 2026.10 · Three.js</p>
+        <ul data-page-node-id="uynhrAaKtAVWxdHJe833vK">
+          <li data-page-node-id="I1mijrW6ZSXeLmWDIIqLnA">单文件 Three.js 场景：GLB 机器人随鼠标转头、瞳孔跟随、手臂浮动与随机眨眼</li>
+          <li data-page-node-id="i6MzARiLHEf5cmpPJ89Cdf">自建暗色摄影棚环境光 + Fresnel 轮廓光 + Bloom 后处理，模型未就绪时自动兜底</li>
+        </ul>
+        <div class="tags" data-page-node-id="GwRfWbhNJKUJnyvoqpdiZJ"><span class="tag" data-page-node-id="mytztYBMwGX7fLsCUYmeBf">Three.js</span><span class="tag" data-page-node-id="nFE83w28bAxedwzXl6YHuV">GLSL</span><span class="tag" data-page-node-id="4GPsawaxLpxoyWeVbsZ8AK">WebGL</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills" data-page-node-id="5abuxF48fpR7ZTbFk1EVfo">
+  <div class="sec-inner" data-page-node-id="XOwUeQnplqjebCYwOd1mzN">
+    <div class="sec-head sr" data-page-node-id="B2MrxQ87HqDlaC9TQeapCC">
+      <span class="sec-kicker" data-page-node-id="b8krkoiYGpCgyaadJjId8E">04 / SKILLS</span>
+      <h2 class="sec-title" data-page-node-id="7TUPErFWMV8qrdkNT19BtG">技能</h2>
+      <span class="sec-aside" data-page-node-id="wcPVMrIhfUIrDb2k7qAmLP">都能在项目里找到出处</span>
+    </div>
+    <div class="skills" data-page-node-id="PtzmxkP4W1PpCeoVq1hnUZ">
+      <div class="skill-group sr" data-page-node-id="elVIK8cebLFpp6sic13KVq">
+        <h3 data-page-node-id="sThd1yGsMU2XB3h9P4kGfG">编程语言</h3>
+        <div class="chips" data-page-node-id="eRzBJK6tCjuFSL3HmGs7Ab">
+          <span class="chip" data-page-node-id="yEezcA1oVZZEN1xpcyPvjX">Python（主力）</span><span class="chip" data-page-node-id="5bJdKb3YLBcExA9msu0Yvv">Java</span><span class="chip" data-page-node-id="KDtNOU5AU0UtGlgyzB6btW">SQL</span><span class="chip" data-page-node-id="G8FxmV3dwQFtMo7fbG9Chq">JavaScript / TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-group sr" style="--d:.06s" data-page-node-id="cog5SGRShY6uaTzlox5Cnx">
+        <h3 data-page-node-id="nmdqJD3FwwTOTBdy7Fgh6J">数据与后端</h3>
+        <div class="chips" data-page-node-id="pNa2WnRJnBkA2yj9q8FtyD">
+          <span class="chip" data-page-node-id="kDmiOiJQQxNHKapXodxiy2">MySQL</span><span class="chip" data-page-node-id="03Sml7bb0PxAmq8sGqh6xR">Redis</span><span class="chip" data-page-node-id="rXQNbvPfmQE4dSqygGS8v7">Airflow</span><span class="chip" data-page-node-id="PYhAlFkXqKCEG1Ubh5bL3o">Kafka（了解）</span><span class="chip" data-page-node-id="EMhDjK153hGtdaaPFFKFkz">Spring Boot</span><span class="chip" data-page-node-id="CiEkhSCAsU8TaEwfG5GoUa">FastAPI</span>
+        </div>
+      </div>
+      <div class="skill-group sr" style="--d:.12s" data-page-node-id="tHWMcec4wiif2ntQwsNQ76">
+        <h3 data-page-node-id="BOdUGS3grcAg4tVsokAjK5">AI 工程</h3>
+        <div class="chips" data-page-node-id="srMlRsCQDjESkQXo1xLZh4">
+          <span class="chip" data-page-node-id="ck8maVliW0CYOPeq7KvadD">LangChain</span><span class="chip" data-page-node-id="yxZB2FqTljqZeEUJP2ecdL">RAG 链路</span><span class="chip" data-page-node-id="B1SwzEqbwXUtiG3sArmSkf">FAISS / Milvus</span><span class="chip" data-page-node-id="V21xNqT5AWoQMaQZY18x98">混合检索与重排</span><span class="chip" data-page-node-id="Ktwjm6nROrguecT1Ty0r5a">评测集构建</span>
+        </div>
+      </div>
+      <div class="skill-group sr" style="--d:.18s" data-page-node-id="QyWw94ifWOjXxAGOUfaBdO">
+        <h3 data-page-node-id="XVbLNNbpYTUJHb7mmi8TCT">工具与其他</h3>
+        <div class="chips" data-page-node-id="MTYZokPwJcVIdrA8Af59oY">
+          <span class="chip" data-page-node-id="HGzyERJceIMjuDAFKrlbuI">Git</span><span class="chip" data-page-node-id="J1NJI8fNxoNJPjQMpVn1K1">Linux</span><span class="chip" data-page-node-id="i0AA004ccWmkHpSS61LVJI">Docker</span><span class="chip" data-page-node-id="El1eUJrfMbgrjfHy8VAzDn">Tableau</span><span class="chip" data-page-node-id="1dLWcoOzt5LeQ9hQW55zp4">CET-6（562）</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact" data-page-node-id="CdSiDbUvc4WLpoImfMc9sk">
+  <div class="sec-inner" data-page-node-id="b6pHVXzMIxxjwcqF6TsUsC">
+    <div class="contact sr" data-page-node-id="r6z5xFlneGMOZt1kC0Hym0">
+      <div class="contact-main" data-page-node-id="WlB51Wq7nBFML3BWQ6Px2X">
+        <h2 data-page-node-id="09PvNSJJGWDhJoEChBCVUa">有合适的机会，<br  data-page-node-id="SPjLQkGLQ5xqVOxitzW2DK"/>或者只是想聊聊，都可以找我。</h2>
+        <p data-page-node-id="MxYgP3oLOTIfNN7EpSgl3l">数据开发、AI 应用、前端工程方向的实习与校招都欢迎；也乐意接一些「把一个想法做成页面」的小活。</p>
+      </div>
+      <div class="contact-links" data-page-node-id="U8Dm1JjEEJfDkAp2zFcC4p">
+        <a class="c-link" href="mailto:sunerkang@njufe.edu.cn" data-page-node-id="KZHSiMZzmBkSTCKWDKcDv1"><em data-page-node-id="sVPlG0TBN2bC2f7TSAJDIs">EMAIL</em><strong data-page-node-id="7aSIqURAga0W1D3faptFa3">sunerkang@njufe.edu.cn</strong></a>
+        <a class="c-link" href="https://github.com/sunerkang" target="_blank" rel="noopener" data-page-node-id="WL7WTGHB0efZ3se1OeI3cl"><em data-page-node-id="SonCnZQUBEfGW0Bxw16ItB">GITHUB</em><strong data-page-node-id="4gbzDjJDKkDiMEjHLCRR6Q">github.com/sunerkang</strong></a>
+        <a class="c-link" href="resume.pdf" target="_blank" rel="noopener" data-page-node-id="QxBcqCAOIQNAN7wQbglNHy"><em data-page-node-id="wVZ6rKeSbhDzAk12VJASaj">RESUME</em><strong data-page-node-id="1bxsy1fGkgnoiq4Hk3Gslh">下载 PDF 简历 →</strong></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" data-page-node-id="hGHAHVvfWr4HNbYieR2Qbe">
+  <div class="foot-inner" data-page-node-id="8ZNQcOHRcERbGdAxKzs60F">
+    <span data-page-node-id="VodS1J2iShtSm8EEMu1HYO">© 2026 孙尔康 · 数据开发 / AI 应用开发</span>
+    <span data-page-node-id="CPb6SbWlszEy99l1Kwo4zY">单文件 HTML / CSS / Three.js · 无框架依赖</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var nav = document.getElementById("nav");
+  var menuBtn = document.getElementById("menuBtn");
+  var panel = document.getElementById("mobilePanel");
+
+  function setMenu(open) {
+    nav.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
+  }
+  menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    setMenu(!nav.classList.contains("open"));
+  });
+  Array.prototype.forEach.call(panel.querySelectorAll("a"), function (a) {
+    a.addEventListener("click", function () { setMenu(false); });
+  });
+  document.addEventListener("click", function (e) {
+    if (nav.classList.contains("open") && !nav.contains(e.target)) setMenu(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setMenu(false);
+  });
+
+  /* scroll reveal */
+  var items = document.querySelectorAll(".sr");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("in");
+          io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.05 });
+    Array.prototype.forEach.call(items, function (el) { io.observe(el); });
+  } else {
+    Array.prototype.forEach.call(items, function (el) { el.classList.add("in"); });
+  }
+
+  /* nav active state */
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  var ticking = false;
+
+  function sync() {
+    var active = -1;
+    targets.forEach(function (s, i) {
+      if (!s) return;
+      if (s.getBoundingClientRect().top <= 140) active = i;
+    });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+      active = links.length - 1;
+    }
+    links.forEach(function (a, i) { a.classList.toggle("is-active", i === active); });
+  }
+
+  window.addEventListener("scroll", function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { sync(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener("resize", sync);
+  sync();
+})();
+</script>
+
+<!-- App source (injected as a module once a reachable CDN has been picked) -->
+<script type="text/plain" id="iris-app">
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { mergeVertices } from "three/addons/utils/BufferGeometryUtils.js";
+
+/* ------------------------------------------------------------------ *
+ *  MODEL SOURCES
+ * ------------------------------------------------------------------ */
+const HEAD_GLB = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261018_172206_0181329a-86e2-41c9-8ab8-c496f29aaa53.glb";
+const ARM_GLB  = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261018_172137_cd6086ec-07ef-44dc-bd15-95a450ddaa8c.glb";
+
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ------------------------------------------------------------------ *
+ *  RENDERER / SCENE / CAMERA
+ * ------------------------------------------------------------------ */
+const canvas = document.getElementById("stage");
+const hero = document.getElementById("hero");
+const loaderEl = document.getElementById("loader");
+const copyEl = document.querySelector(".copy");
+
+const renderer = new THREE.WebGLRenderer({
+  canvas,
+  antialias: true,
+  powerPreference: "high-performance"
+});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color("#0b0b11");
+
+const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 100);
+camera.position.set(0, 0, 6);
+
+/* ------------------------------------------------------------------ *
+ *  TEXTURE HELPERS
+ * ------------------------------------------------------------------ */
+function radialTexture(stops, size = 256) {
+  const c = document.createElement("canvas");
+  c.width = c.height = size;
+  const ctx = c.getContext("2d");
+  const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+  stops.forEach(([offset, color]) => g.addColorStop(offset, color));
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, size, size);
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.needsUpdate = true;
+  return tex;
+}
+
+const glowTex = radialTexture([
+  [0, "rgba(160,120,255,1)"],
+  [0.25, "rgba(124,77,255,.55)"],
+  [0.6, "rgba(90,50,230,.12)"],
+  [1, "rgba(60,30,200,0)"]
+]);
+
+const irisTex = radialTexture([
+  [0, "#d7c9ff"],
+  [0.45, "#a07bff"],
+  [0.8, "#7646f2"],
+  [1, "#5c2fe0"]
+]);
+
+/* ------------------------------------------------------------------ *
+ *  ENVIRONMENT — dark studio built from emissive softboxes
+ * ------------------------------------------------------------------ */
+function buildEnvironment() {
+  const envScene = new THREE.Scene();
+  envScene.background = new THREE.Color(0x030305);
+
+  const sphere = new THREE.SphereGeometry(0.5, 32, 16);
+
+  function softbox(color, intensity, w, h, x, y, z) {
+    const mat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color(color).multiplyScalar(intensity)
+    });
+    const mesh = new THREE.Mesh(sphere, mat);
+    mesh.position.set(x, y, z);
+    mesh.scale.set(w, h, 0.3);
+    mesh.lookAt(0, 0, 0);
+    envScene.add(mesh);
+  }
+
+  // key, top-left
+  softbox(0xffffff, 3.2, 5, 3.2, -3, 4.5, 4);
+  // strip, right
+  softbox(0xffffff, 1.1, 1.2, 6, 6, 0.5, 2);
+  // top
+  softbox(0xffffff, 0.8, 3, 1, 1.5, 5, -1);
+  // violet back-left / back-right
+  softbox(0x7c4dff, 1.0, 4, 5, -5, 0, -4);
+  softbox(0x7c4dff, 1.0, 4, 5, 5, 0, -4);
+  // violet floor bounce
+  softbox(0x5b30ff, 0.35, 6, 3, 0, -5, 1);
+
+  return envScene;
+}
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+pmrem.compileCubemapShader();
+const envRT = pmrem.fromScene(buildEnvironment(), 0.02);
+scene.environment = envRT.texture;
+scene.environmentIntensity = 1.0;
+
+/* lights */
+const hemi = new THREE.HemisphereLight(0xdcd8f0, 0x1a0f3a, 2.3);
+scene.add(hemi);
+
+const dir = new THREE.DirectionalLight(0xffffff, 0.55);
+dir.position.set(-3, 4, 5);
+scene.add(dir);
+
+/* ------------------------------------------------------------------ *
+ *  POST PROCESSING
+ * ------------------------------------------------------------------ */
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+
+const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), 0.55, 0.4, 0.92);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+/* ------------------------------------------------------------------ *
+ *  FRESNEL RIM
+ * ------------------------------------------------------------------ */
+function rimMaterial(color, power, strength) {
+  return new THREE.ShaderMaterial({
+    uniforms: {
+      uColor: { value: new THREE.Color(color) },
+      uPower: { value: power },
+      uStrength: { value: strength }
+    },
+    vertexShader: `
+      varying vec3 vN;
+      varying vec3 vV;
+      void main() {
+        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+        vN = normalize(normalMatrix * normal);
+        vV = normalize(-mvPosition.xyz);
+        gl_Position = projectionMatrix * mvPosition;
+      }
+    `,
+    fragmentShader: `
+      uniform vec3 uColor;
+      uniform float uPower;
+      uniform float uStrength;
+      varying vec3 vN;
+      varying vec3 vV;
+      void main() {
+        float f = pow(1.0 - max(dot(normalize(vN), normalize(vV)), 0.0), uPower);
+        gl_FragColor = vec4(uColor * f * uStrength, f);
+      }
+    `,
+    transparent: true,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+  });
+}
+
+/* ------------------------------------------------------------------ *
+ *  MODEL PREP
+ * ------------------------------------------------------------------ */
+function prepareModel(root, { glossy = false, rim = null, tint = "#4a4a56", useMap = false, smooth = false } = {}) {
+  // collect FIRST — adding children inside traverse would recurse forever
+  const meshes = [];
+  root.traverse((o) => { if (o.isMesh) meshes.push(o); });
+
+  meshes.forEach((mesh) => {
+    let geo = mesh.geometry;
+
+    if (smooth) {
+      geo = geo.clone();
+      ["normal", "uv", "uv1", "tangent", "color"].forEach((attr) => {
+        if (geo.attributes[attr]) geo.deleteAttribute(attr);
+      });
+      geo = mergeVertices(geo, 1e-3);
+      geo.computeVertexNormals();
+    }
+
+    const baseMap = mesh.material && mesh.material.map ? mesh.material.map : null;
+    const mat = new THREE.MeshPhysicalMaterial({
+      map: useMap ? baseMap : null,
+      color: new THREE.Color(tint),
+      metalness: glossy ? 0.1 : 0,
+      roughness: glossy ? 0.3 : 0.48,
+      clearcoat: glossy ? 1.0 : 0.3,
+      clearcoatRoughness: glossy ? 0.16 : 0.4,
+      envMapIntensity: glossy ? 0.9 : 0.55
+    });
+
+    mesh.geometry = geo;
+    mesh.material = mat;
+
+    if (rim) {
+      const shell = new THREE.Mesh(geo, rimMaterial(rim.color, rim.power, rim.strength));
+      shell.renderOrder = 2;
+      shell.scale.setScalar(1.004);
+      shell.userData.isRim = true;
+      mesh.add(shell);
+    }
+  });
+}
+
+/* ------------------------------------------------------------------ *
+ *  RIG
+ * ------------------------------------------------------------------ */
+const robot = new THREE.Group();
+const body = new THREE.Group();
+const head = new THREE.Group();
+robot.add(body);
+body.add(head);
+scene.add(robot);
+
+const arms = [];
+const eyeGroups = [];
+const pupils = [];
+let antennaGlows = [];
+let floorGlow = null;
+let hazeSprite = null;
+
+/* ------------------------------------------------------------------ *
+ *  HEAD NORMALISATION
+ * ------------------------------------------------------------------ */
+function normaliseHead(model) {
+  model.updateWorldMatrix(true, true);
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3());
+  const s = 2 / Math.max(size.z, 1e-6);
+  model.scale.setScalar(s);
+  model.updateWorldMatrix(true, true);
+
+  const box2 = new THREE.Box3().setFromObject(model);
+  const centre = box2.getCenter(new THREE.Vector3());
+  model.position.set(-centre.x, -(box2.min.y + 1), -centre.z);
+  model.updateWorldMatrix(true, true);
+}
+
+/* ------------------------------------------------------------------ *
+ *  VISOR GEOMETRY
+ * ------------------------------------------------------------------ */
+function roundedRectShape(w, h, r, centreY) {
+  const shape = new THREE.Shape();
+  const x0 = -w / 2, x1 = w / 2;
+  const y0 = -h / 2 + centreY, y1 = h / 2 + centreY;
+  const rr = Math.min(r, Math.min(w, h) / 2);
+
+  shape.moveTo(x0 + rr, y0);
+  shape.lineTo(x1 - rr, y0);
+  shape.absarc(x1 - rr, y0 + rr, rr, -Math.PI / 2, 0, false);
+  shape.lineTo(x1, y1 - rr);
+  shape.absarc(x1 - rr, y1 - rr, rr, 0, Math.PI / 2, false);
+  shape.lineTo(x0 + rr, y1);
+  shape.absarc(x0 + rr, y1 - rr, rr, Math.PI / 2, Math.PI, false);
+  shape.lineTo(x0, y0 + rr);
+  shape.absarc(x0 + rr, y0 + rr, rr, Math.PI, Math.PI * 1.5, false);
+  return shape;
+}
+
+function subdivide4(positions) {
+  const out = [];
+  const push = (a, b, c) => out.push(a[0], a[1], 0, b[0], b[1], 0, c[0], c[1], 0);
+
+  for (let i = 0; i < positions.length; i += 9) {
+    const a = [positions[i], positions[i + 1]];
+    const b = [positions[i + 3], positions[i + 4]];
+    const c = [positions[i + 6], positions[i + 7]];
+
+    const ab = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+    const bc = [(b[0] + c[0]) / 2, (b[1] + c[1]) / 2];
+    const ca = [(c[0] + a[0]) / 2, (c[1] + a[1]) / 2];
+
+    push(a, ab, ca);
+    push(ab, b, bc);
+    push(ca, bc, c);
+    push(ab, bc, ca);
+  }
+  return out;
+}
+
+function wrapToSphere(positions, radius) {
+  const out = new Float32Array(positions.length);
+  for (let i = 0; i < positions.length; i += 3) {
+    const x = positions[i];
+    const y = positions[i + 1];
+    const z = Math.sqrt(Math.max(radius * radius - x * x - y * y, 0));
+    const len = Math.hypot(x, y, z) || 1;
+    out[i] = x;
+    out[i + 1] = y;
+    out[i + 2] = z;
+    positions[i + 2] = z;
+    // normals = normalised positions, stored separately by caller
+    positions.normalX = len;
+  }
+  return out;
+}
+
+function visorGeometry(w, h, corner, centreY, radius) {
+  const shape = roundedRectShape(w, h, corner, centreY);
+  let geo = new THREE.ShapeGeometry(shape, 48);
+  if (geo.index) geo = geo.toNonIndexed();
+
+  let pos = geo.attributes.position.array;
+  for (let round = 0; round < 3; round++) {
+    pos = subdivide4(pos);
+  }
+
+  const count = pos.length / 3;
+  const posArr = new Float32Array(count * 3);
+  const nrmArr = new Float32Array(count * 3);
+
+  for (let i = 0; i < count; i++) {
+    const x = pos[i * 3];
+    const y = pos[i * 3 + 1];
+    const z = Math.sqrt(Math.max(radius * radius - x * x - y * y, 0));
+    posArr[i * 3] = x;
+    posArr[i * 3 + 1] = y;
+    posArr[i * 3 + 2] = z;
+
+    const l = Math.hypot(x, y, z) || 1;
+    nrmArr[i * 3] = x / l;
+    nrmArr[i * 3 + 1] = y / l;
+    nrmArr[i * 3 + 2] = z / l;
+  }
+
+  const out = new THREE.BufferGeometry();
+  out.setAttribute("position", new THREE.BufferAttribute(posArr, 3));
+  out.setAttribute("normal", new THREE.BufferAttribute(nrmArr, 3));
+  return out;
+}
+
+/* ------------------------------------------------------------------ *
+ *  HEAD-SPACE VERTEX CACHE
+ * ------------------------------------------------------------------ */
+function headMatrices(headGroup) {
+  const inv = new THREE.Matrix4().copy(headGroup.matrixWorld).invert();
+  const list = [];
+  headGroup.traverse((o) => {
+    if (!o.isMesh || o.userData.isRim) return;
+    const m = new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld);
+    const m3 = new THREE.Matrix3().setFromMatrix4(m);
+    const m3t = m3.clone().transpose();
+    list.push({ mesh: o, m, m3t });
+  });
+  return list;
+}
+
+function collectHeadPoints(headGroup) {
+  const entries = headMatrices(headGroup);
+  const pts = [];
+  const v = new THREE.Vector3();
+  entries.forEach(({ mesh, m }) => {
+    const p = mesh.geometry.attributes.position;
+    if (!p) return;
+    const step = Math.max(1, Math.floor(p.count / 12000));
+    for (let i = 0; i < p.count; i += step) {
+      v.fromBufferAttribute(p, i).applyMatrix4(m);
+      pts.push(v.clone());
+    }
+  });
+  return pts;
+}
+
+/* ------------------------------------------------------------------ *
+ *  EYES
+ * ------------------------------------------------------------------ */
+function makeEye(side, R) {
+  const x = 0.43 * side;
+  const y = -0.08;
+  const z = Math.sqrt(Math.max((R * 1.055) ** 2 - x * x - y * y, 0));
+
+  const group = new THREE.Group();
+  group.position.set(x, y, z);
+  group.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), group.position.clone().normalize());
+
+  // halo
+  const halo = new THREE.Mesh(
+    new THREE.CircleGeometry(0.42, 64),
+    new THREE.MeshBasicMaterial({
+      map: glowTex, color: 0x8a5cff, transparent: true, opacity: 0.24,
+      blending: THREE.AdditiveBlending, depthWrite: false, depthTest: false, toneMapped: false
+    })
+  );
+  halo.position.z = -0.004;
+  halo.renderOrder = 9;
+  group.add(halo);
+
+  // ring
+  const ring = new THREE.Mesh(
+    new THREE.RingGeometry(0.168, 0.212, 64),
+    new THREE.MeshBasicMaterial({
+      color: new THREE.Color(1.1, 0.88, 2.0), transparent: true,
+      depthWrite: false, depthTest: false, toneMapped: false, side: THREE.DoubleSide
+    })
+  );
+  ring.renderOrder = 10;
+  group.add(ring);
+
+  // iris
+  const iris = new THREE.Mesh(
+    new THREE.CircleGeometry(0.17, 64),
+    new THREE.MeshBasicMaterial({
+      map: irisTex, color: new THREE.Color(1.0, 0.95, 1.15), transparent: true,
+      depthWrite: false, depthTest: false, toneMapped: false
+    })
+  );
+  iris.position.z = 0.001;
+  iris.renderOrder = 10;
+  group.add(iris);
+
+  // pupil + glint
+  const pupilWrap = new THREE.Group();
+  pupilWrap.position.z = 0;
+  pupilWrap.renderOrder = 10;
+
+  const pupil = new THREE.Mesh(
+    new THREE.CircleGeometry(0.083, 48),
+    new THREE.MeshBasicMaterial({
+      color: 0x07040f, transparent: true, depthWrite: false, depthTest: false, toneMapped: false
+    })
+  );
+  pupil.position.z = 0.003;
+  pupil.renderOrder = 10;
+  pupilWrap.add(pupil);
+
+  const glint = new THREE.Mesh(
+    new THREE.CircleGeometry(0.022, 24),
+    new THREE.MeshBasicMaterial({
+      color: 0xffffff, transparent: true, depthWrite: false, depthTest: false, toneMapped: false
+    })
+  );
+  glint.position.set(0.032, 0.034, 0.005);
+  glint.renderOrder = 10;
+  pupilWrap.add(glint);
+
+  group.add(pupilWrap);
+
+  eyeGroups.push(group);
+  pupils.push(pupilWrap);
+  return group;
+}
+
+/* ------------------------------------------------------------------ *
+ *  ANTENNA BALLS
+ * ------------------------------------------------------------------ */
+function addAntennaBalls(headGroup) {
+  const pts = collectHeadPoints(headGroup);
+  const ballMat = new THREE.MeshPhysicalMaterial({
+    color: 0x8b62ff, emissive: 0x6a3dff, emissiveIntensity: 1.5,
+    roughness: 0.22, clearcoat: 1, clearcoatRoughness: 0.14, metalness: 0.1
+  });
+
+  [-1, 1].forEach((side) => {
+    const sidePts = pts.filter((p) => p.y > 0.75 && p.x * side > 0.15);
+    if (!sidePts.length) return;
+
+    const top = sidePts.reduce((a, b) => (b.y > a.y ? b : a), sidePts[0]);
+    const near = sidePts.filter((p) => p.distanceTo(top) <= 0.2);
+    const centre = near.reduce((acc, p) => acc.add(p), new THREE.Vector3()).divideScalar(near.length);
+    centre.y = Math.max(centre.y, top.y - 0.1);
+
+    const ball = new THREE.Mesh(new THREE.SphereGeometry(0.118, 32, 24), ballMat);
+    ball.position.copy(centre);
+    headGroup.add(ball);
+
+    const sprite = new THREE.Sprite(
+      new THREE.SpriteMaterial({
+        map: glowTex, color: 0x9a6bff, opacity: 0.85, transparent: true,
+        blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false
+      })
+    );
+    sprite.scale.setScalar(0.5);
+    sprite.position.copy(centre);
+    headGroup.add(sprite);
+    antennaGlows.push(sprite);
+  });
+}
+
+/* ------------------------------------------------------------------ *
+ *  MOUNT HEAD (visor + eyes + antennae)
+ * ------------------------------------------------------------------ */
+function mountHead(headGroup) {
+  headGroup.updateWorldMatrix(true, true);
+
+  // a) sphere radius from a ray cast at the head
+  const ray = new THREE.Raycaster();
+  ray.set(new THREE.Vector3(0, 0, 5), new THREE.Vector3(0, 0, -1));
+  const hits = ray.intersectObject(headGroup, true);
+  const R = hits.length ? clamp(hits[0].point.length(), 0.85, 1.1) : 1;
+
+  // b) align the surface normals to a perfect sphere
+  const entries = headMatrices(headGroup);
+  const v = new THREE.Vector3();
+  const n = new THREE.Vector3();
+  entries.forEach(({ mesh, m, m3t }) => {
+    const pos = mesh.geometry.attributes.position;
+    const nor = mesh.geometry.attributes.normal;
+    if (!pos || !nor) return;
+    for (let i = 0; i < pos.count; i++) {
+      v.fromBufferAttribute(pos, i).applyMatrix4(m);
+      if (Math.abs(v.length() - R) <= R * 0.07) {
+        n.copy(v).normalize().applyMatrix3(m3t).normalize();
+        nor.setXYZ(i, n.x, n.y, n.z);
+      }
+    }
+    nor.needsUpdate = true;
+  });
+
+  // c) visor
+  const bezelGeo = visorGeometry(1.86, 1.12, 0.46, -0.07, R * 1.03);
+  const bezel = new THREE.Mesh(
+    bezelGeo,
+    new THREE.MeshPhysicalMaterial({
+      color: 0x0c0c10, roughness: 0.3, metalness: 0.3,
+      clearcoat: 0.8, clearcoatRoughness: 0.25, envMapIntensity: 0.9,
+      polygonOffset: true, polygonOffsetFactor: -6, polygonOffsetUnits: -6
+    })
+  );
+  bezel.renderOrder = 3;
+  headGroup.add(bezel);
+
+  const glassGeo = visorGeometry(1.74, 1.0, 0.4, -0.07, R * 1.036);
+  const glass = new THREE.Mesh(
+    glassGeo,
+    new THREE.MeshPhysicalMaterial({
+      color: 0x000000, roughness: 0.12, clearcoat: 1, clearcoatRoughness: 0.1,
+      envMapIntensity: 0.9, metalness: 0,
+      polygonOffset: true, polygonOffsetFactor: -8, polygonOffsetUnits: -8
+    })
+  );
+  glass.renderOrder = 4;
+  headGroup.add(glass);
+
+  // d) eyes
+  headGroup.add(makeEye(-1, R));
+  headGroup.add(makeEye(1, R));
+
+  // e) antenna balls
+  addAntennaBalls(headGroup);
+
+  return R;
+}
+
+/* ------------------------------------------------------------------ *
+ *  FALLBACK MODELS
+ * ------------------------------------------------------------------ */
+function fallbackHead() {
+  const g = new THREE.Group();
+  const mat = new THREE.MeshPhysicalMaterial({
+    color: 0x2c2c35, roughness: 0.26, clearcoat: 1, clearcoatRoughness: 0.14,
+    metalness: 0.1, envMapIntensity: 0.9
+  });
+
+  const sphere = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 48), mat);
+  g.add(sphere);
+
+  const shell = new THREE.Mesh(sphere.geometry, rimMaterial(0x8a5cff, 4.5, 0.32));
+  shell.renderOrder = 2;
+  shell.scale.setScalar(1.004);
+  shell.userData.isRim = true;
+  sphere.add(shell);
+
+  const earGeo = new THREE.CylinderGeometry(0.22, 0.22, 0.12, 32);
+  const rodMat = new THREE.MeshPhysicalMaterial({ color: 0x3a3a44, roughness: 0.3, metalness: 0.4, clearcoat: 0.6 });
+
+  [-1, 1].forEach((side) => {
+    const ear = new THREE.Mesh(earGeo, mat);
+    ear.rotation.z = Math.PI / 2;
+    ear.position.set(side * 0.99, 0, 0);
+    g.add(ear);
+
+    const rod = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.5, 16), rodMat);
+    rod.position.set(side * 0.42, 1.18, 0);
+    rod.rotation.z = side > 0 ? -0.18 : 0.18;
+    g.add(rod);
+  });
+
+  return g;
+}
+
+function fallbackArm() {
+  const geo = new THREE.CapsuleGeometry(0.22, 0.42, 16, 24);
+  const mesh = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({
+    color: 0x1b1b21, roughness: 0.48, metalness: 0, clearcoat: 0.3,
+    clearcoatRoughness: 0.4, envMapIntensity: 0.55
+  }));
+  const shell = new THREE.Mesh(geo, rimMaterial(0x8a5cff, 2.6, 1.05));
+  shell.renderOrder = 2;
+  shell.scale.setScalar(1.004);
+  shell.userData.isRim = true;
+  mesh.add(shell);
+  return mesh;
+}
+
+/* ------------------------------------------------------------------ *
+ *  ARMS
+ * ------------------------------------------------------------------ */
+function normaliseArm(model) {
+  model.updateWorldMatrix(true, true);
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3());
+  const s = 0.78 / Math.max(size.y, 1e-6);
+  model.scale.setScalar(s);
+  model.updateWorldMatrix(true, true);
+
+  const box2 = new THREE.Box3().setFromObject(model);
+  const centre = box2.getCenter(new THREE.Vector3());
+  model.position.set(-centre.x, -centre.y, -centre.z);
+
+  const wrap = new THREE.Group();
+  wrap.add(model);
+  return wrap;
+}
+
+const ARM_REST = [
+  { x: -1.32, y: -0.72, z: 0.15, rz: -0.62, phase: 0 },
+  { x: 1.32, y: -0.72, z: 0.15, rz: 0.62, phase: Math.PI * 0.85 }
+];
+
+function addArm(model, index) {
+  const rest = ARM_REST[index];
+  const wrap = normaliseArm(model);
+  wrap.position.set(rest.x, rest.y, rest.z);
+  wrap.rotation.z = rest.rz;
+  body.add(wrap);
+
+  arms.push({
+    obj: wrap,
+    restX: rest.x,
+    restY: rest.y,
+    restRz: rest.rz,
+    phase: rest.phase
+  });
+}
+
+/* ------------------------------------------------------------------ *
+ *  SCENE DECORATION
+ * ------------------------------------------------------------------ */
+hazeSprite = new THREE.Sprite(
+  new THREE.SpriteMaterial({
+    map: glowTex, color: 0x7a55ff, opacity: 0.06, transparent: true,
+    blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false
+  })
+);
+hazeSprite.scale.setScalar(7.5);
+hazeSprite.position.set(0, 0.1, -3);
+scene.add(hazeSprite);
+
+floorGlow = new THREE.Mesh(
+  new THREE.PlaneGeometry(1, 1),
+  new THREE.MeshBasicMaterial({
+    map: glowTex, color: 0x8f6bff, opacity: 0.95, transparent: true,
+    blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false
+  })
+);
+floorGlow.position.set(0, -2.05, -0.6);
+floorGlow.scale.set(3.4, 0.42, 1);
+scene.add(floorGlow);
+
+/* ------------------------------------------------------------------ *
+ *  LOAD
+ * ------------------------------------------------------------------ */
+const gltfLoader = new GLTFLoader();
+
+/* wrapped loader: lets us ask "has THIS download settled?" */
+function loadWithStatus(url) {
+  const promise = gltfLoader.loadAsync(url);
+  let done = false, ok = false, value = null;
+  promise.then((v) => { done = true; ok = true; value = v; })
+         .catch(() => { done = true; });
+  return { promise, get result() { return done ? { ok, value } : null; } };
+}
+
+const headLoad = loadWithStatus(HEAD_GLB);
+const armLoad  = loadWithStatus(ARM_GLB);
+headLoad.promise.catch(() => {});
+armLoad.promise.catch(() => {});
+
+let R = 1;
+let built = false;
+let bothReal = false;
+let modelsLoaded = false;
+
+function clearRobot() {
+  while (head.children.length) head.remove(head.children[0]);
+  arms.forEach((a) => body.remove(a.obj));
+  arms.length = 0;
+  eyeGroups.length = 0;
+  pupils.length = 0;
+  antennaGlows.length = 0;
+}
+
+function assemble(headModel, armModel) {
+  clearRobot();
+
+  /* ---------- head ---------- */
+  if (headModel) {
+    normaliseHead(headModel);
+    prepareModel(headModel, {
+      glossy: true,
+      rim: { color: 0x8a5cff, power: 4.5, strength: 0.32 },
+      tint: "#4a4a56",
+      useMap: false,
+      smooth: false
+    });
+    head.add(headModel);
+  } else {
+    head.add(fallbackHead());
+  }
+
+  /* ---------- arms ---------- */
+  if (armModel) {
+    prepareModel(armModel, {
+      glossy: false,
+      rim: { color: 0x8a5cff, power: 2.6, strength: 1.05 },
+      tint: "#1d1d23",
+      useMap: false,
+      smooth: true
+    });
+    const copies = [armModel, armModel.clone(true)];
+    copies.forEach((m, i) => addArm(m, i));
+  } else {
+    addArm(fallbackArm(), 0);
+    addArm(fallbackArm(), 1);
+  }
+
+  R = mountHead(head);
+  bothReal = !!(headModel && armModel);
+  robot.scale.setScalar(0.001);
+
+  if (!built) {
+    built = true;
+    modelsLoaded = true;
+    loaderEl.classList.add("hide");
+    setTimeout(() => { loaderEl.style.display = "none"; }, 600);
+  }
+  intro = 0; /* replay the pop — also when upgrading from fallback to real models */
+
+  window.__iris = {
+    loaded: { head: !!headModel, arm: !!armModel },
+    radius: R,
+    eyes: eyeGroups.length,
+    arms: arms.length,
+    antennae: antennaGlows.length
+  };
+}
+
+/* fast path: if both models are already there, go */
+setTimeout(() => {
+  if (bothReal) return;
+  const h = headLoad.result, a = armLoad.result;
+  if (h && a) {
+    assemble(
+      h.ok ? h.value && h.value.scene : null,
+      a.ok ? a.value && a.value.scene : null
+    );
+    return;
+  }
+  /* slow network: put the fallback robot on stage now, swap later */
+  assemble(null, null);
+}, 12000);
+
+/* final: rebuild with the real models once both downloads settle */
+Promise.all([headLoad.promise, armLoad.promise]).then(([h, a]) => {
+  if (bothReal) return;
+  assemble(h && h.scene, a && a.scene);
+}).catch(() => {
+  if (!built) assemble(null, null);
+});
+
+/* ------------------------------------------------------------------ *
+ *  LAYOUT
+ * ------------------------------------------------------------------ */
+let W = 1, H = 1, isMobile = false;
+const anchor = { x: 0, y: 0 };
+let rx = 500, ry = 400;
+
+function layout() {
+  W = hero.clientWidth;
+  H = hero.clientHeight;
+  if (!W || !H) return;
+
+  isMobile = W <= 860;
+
+  renderer.setSize(W, H);
+  composer.setSize(W, H);
+  bloom.setSize(W, H);
+
+  camera.aspect = W / H;
+
+  let robotPx;
+  if (isMobile) {
+    const copyTop = copyEl.getBoundingClientRect().top - hero.getBoundingClientRect().top;
+    const room = Math.max(copyTop - 62, 220);
+    robotPx = Math.min(room * 0.92, W * 0.82);
+    anchor.x = W / 2;
+    anchor.y = 62 + room * 0.5;
+    rx = W * 0.5;
+    ry = H * 0.5;
+  } else {
+    robotPx = Math.min(H * 0.62, W * 0.4, 640);
+    anchor.x = W * 0.695;
+    anchor.y = H * 0.5 + 8;
+    rx = Math.max(W * 0.55, 500);
+    ry = Math.max(H * 0.55, 400);
+  }
+
+  const fov = camera.fov * Math.PI / 180;
+  camera.position.set(0, 0, (3.4 * H) / (robotPx * 2 * Math.tan(fov / 2)));
+  camera.setViewOffset(W, H, W / 2 - anchor.x, H / 2 - anchor.y, W, H);
+  camera.updateProjectionMatrix();
+
+  loaderEl.style.left = anchor.x + "px";
+  loaderEl.style.top = anchor.y + "px";
+}
+
+new ResizeObserver(layout).observe(hero);
+layout();
+
+/* ------------------------------------------------------------------ *
+ *  POINTER
+ * ------------------------------------------------------------------ */
+const target = new THREE.Vector3(0, 0, 0);
+const look = new THREE.Vector3(0, 0, 0);
+let lastPointerMove = performance.now();
+
+function onPointer(e) {
+  if (typeof e.clientX !== "number") return;
+  target.x = clamp((e.clientX - anchor.x) / rx, -1.2, 1.2);
+  target.y = clamp((e.clientY - anchor.y) / ry, -1.2, 1.2);
+  lastPointerMove = performance.now();
+}
+
+window.addEventListener("pointermove", onPointer, { passive: true });
+window.addEventListener("pointerdown", onPointer, { passive: true });
+window.addEventListener("touchmove", (e) => {
+  if (e.touches && e.touches[0]) onPointer(e.touches[0]);
+}, { passive: true });
+
+/* ------------------------------------------------------------------ *
+ *  MENU  — handled by the standalone UI script above so the nav still
+ *  works when the Three.js CDN is unreachable.
+ * ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ *
+ *  VISIBILITY
+ * ------------------------------------------------------------------ */
+let heroVisible = true;
+new IntersectionObserver((entries) => {
+  entries.forEach((entry) => { heroVisible = entry.isIntersecting; });
+}, { threshold: 0 }).observe(hero);
+
+/* ------------------------------------------------------------------ *
+ *  ANIMATION
+ * ------------------------------------------------------------------ */
+const clock = new THREE.Clock();
+let intro = 0;
+let blinkStart = -1;
+let nextBlink = 2.8;
+let elapsed = 0;
+let frames = 0;
+
+function animate() {
+  requestAnimationFrame(animate);
+  try {
+    if (!heroVisible || !modelsLoaded) return;
+
+  const dt = Math.min(clock.getDelta(), 0.05);
+  elapsed += dt;
+  const t = elapsed;
+  const m = prefersReduced ? 0.25 : 1;
+
+  /* idle look-around */
+  if (performance.now() - lastPointerMove > 3500) {
+    target.x = Math.sin(t * 0.45) * 0.45;
+    target.y = Math.sin(t * 0.31 + 1.2) * 0.2;
+  }
+
+  /* smoothing */
+  const k = 1 - Math.pow(0.0025, dt);
+  look.x += (target.x - look.x) * k;
+  look.y += (target.y - look.y) * k;
+
+  /* intro pop */
+  intro = Math.min(1, intro + dt * 1.4);
+  const s = 1 + 2.4 * Math.pow(intro - 1, 3) + 1.4 * Math.pow(intro - 1, 2);
+  robot.scale.setScalar(Math.max(s, 0.001));
+
+  /* float */
+  const bob = Math.sin(t * 1.6) * 0.09 * m;
+  robot.position.y = bob;
+
+  /* head / body */
+  head.rotation.y = look.x * 0.5;
+  head.rotation.x = look.y * 0.42;
+  head.rotation.z = -look.x * 0.06 + Math.sin(t * 1.1) * 0.015 * m;
+
+  body.rotation.y = look.x * 0.28;
+  body.rotation.x = look.y * 0.12;
+
+  /* arms */
+  arms.forEach((arm) => {
+    const w = Math.sin(t * 2.0 + arm.phase);
+    const sign = Math.sign(arm.restX) || 1;
+    arm.obj.position.y = arm.restY + w * 0.13 * m - bob * 0.35;
+    arm.obj.position.x = arm.restX + sign * look.x * -0.04;
+    arm.obj.rotation.z = arm.restRz + w * 0.12 * sign * m;
+    arm.obj.rotation.x = Math.sin(t * 1.3 + arm.phase) * 0.08 * m;
+  });
+
+  /* pupils */
+  const px = clamp(look.x * 0.075, -0.07, 0.07);
+  const py = clamp(-look.y * 0.06, -0.06, 0.06);
+  pupils.forEach((p) => p.position.set(px, py, 0));
+
+  /* blink */
+  if (blinkStart < 0 && t > nextBlink) blinkStart = t;
+  if (blinkStart >= 0) {
+    const bt = (t - blinkStart) / 0.32;
+    let sy = 1;
+    if (bt < 0.5) sy = 1 - (1 - 0.08) * (bt / 0.5);
+    else if (bt < 1) sy = 0.08 + (1 - 0.08) * ((bt - 0.5) / 0.5);
+    else { blinkStart = -1; nextBlink = t + 2.5 + Math.random() * 3.5; sy = 1; }
+    eyeGroups.forEach((e) => { e.scale.y = sy; });
+  } else {
+    eyeGroups.forEach((e) => { e.scale.y = 1; });
+  }
+
+  /* floor glow follows the bob */
+  floorGlow.scale.set(3.4 - bob * 3, 0.42 - bob * 0.4, 1);
+  floorGlow.material.opacity = 0.7 + (0.09 - bob) * 1.5;
+
+  /* antenna pulse */
+  const op = 0.7 * (0.85 + Math.sin(t * 1.6) * 0.15) + 0.15;
+  antennaGlows.forEach((s2) => { s2.material.opacity = op; });
+
+  frames++;
+  composer.render();
+  } catch (err) {
+    (window.__frameErrs = window.__frameErrs || []).push(String((err && err.message) || err));
+  }
+}
+
+/* debug hook for QA */
+window.__irisDebug = function () {
+  return {
+    frames,
+    modelsLoaded,
+    robotScale: robot.scale.x,
+    cameraZ: camera.position.z,
+    frameErrs: (window.__frameErrs || []).slice(0, 5)
+  };
+};
+
+animate();
+</script>
+
+<!-- CDN bootstrap: prefer the spec importmap (jsDelivr); fall back to a mirror
+     if it is unreachable, then inject the app module. -->
+<script>
+(function () {
+  var CDNS = [
+    { name: "jsDelivr",
+      three: "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      addons: "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" },
+    { name: "npmmirror",
+      three: "https://registry.npmmirror.com/three/0.169.0/files/build/three.module.js",
+      addons: "https://registry.npmmirror.com/three/0.169.0/files/examples/jsm/" },
+    { name: "unpkg",
+      three: "https://unpkg.com/three@0.169.0/build/three.module.js",
+      addons: "https://unpkg.com/three@0.169.0/examples/jsm/" }
+  ];
+
+  function probe(url) {
+    var ctrl = new AbortController();
+    var timer = setTimeout(function () { ctrl.abort(); }, 5000);
+    return fetch(url, { signal: ctrl.signal, cache: "no-store", mode: "cors" })
+      .then(function (r) { clearTimeout(timer); return r.ok; })
+      .catch(function () { clearTimeout(timer); return false; });
+  }
+
+  function boot(src, offline) {
+    if (src) {
+      var map = document.createElement("script");
+      map.type = "importmap";
+      map.textContent = JSON.stringify({
+        imports: { "three": src.three, "three/addons/": src.addons }
+      });
+      document.head.appendChild(map);
+    }
+
+    var mod = document.createElement("script");
+    mod.type = "module";
+    mod.textContent = document.getElementById("iris-app").textContent;
+    document.body.appendChild(mod);
+
+    if (offline) {
+      var loader = document.getElementById("loader");
+      if (loader) loader.style.animation = "none";
+      var note = document.createElement("div");
+      note.textContent = "无法连接 Three.js CDN，请检查网络后刷新页面。";
+      note.style.cssText = "position:fixed;z-index:30;left:50%;top:calc(50% + 44px);transform:translate(-50%,-50%);" +
+        "color:#a3a3b2;font-size:13px;letter-spacing:.02em;font-family:Figtree,system-ui,sans-serif;";
+      document.body.appendChild(note);
+    }
+  }
+
+  (async function () {
+    for (var i = 0; i < CDNS.length; i++) {
+      if (await probe(CDNS[i].three)) { boot(CDNS[i], false); return; }
+    }
+    boot(null, true);
+  })();
+})();
+</script>
+</body>
+</html>
